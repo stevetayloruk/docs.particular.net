@@ -23,6 +23,7 @@ Whenever execution history, a timely and/or fully-reliable scheduling is needed,
 
  * A [.NET Timer](https://msdn.microsoft.com/en-us/library/system.threading.timer.aspx).
  * [Quartz.NET](https://www.quartz-scheduler.net/). See [Quartz.NET Sample](/samples/scheduling/quartz/).
+ * OS task scheduler, like the Windows task scheduler or Linux cron jobs.
  * [Hangfire](https://www.hangfire.io/). See [Hangfire Sample](/samples/scheduling/hangfire/).
  * [FluentScheduler](https://github.com/fluentscheduler/FluentScheduler). See [FluentScheduler Sample](/samples/scheduling/fluentscheduler/).
 
