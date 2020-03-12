@@ -17,7 +17,9 @@ Under certain failure scenarios, the scheduled task can stop firing until the en
 
 The Scheduler leverages the queuing system to trigger scheduled actions. Under heavy load, there may be some disparity between the expected time of a scheduled action and execution time due to the delay between timeout messages being generated and processed. This behavior can be mitigated by running the Scheduler in a dedicated endpoint so that appropriate resource allocation can put in place. 
 
-Whenever a timely and/or fully-reliable scheduling is needed, it is recommended to use a dedicated scheduling technology, for example:
+This simple scheduler is message based and does not provide any execution history and persistent failures can cause the reoccuring task to stop until either its messages is manually retried or the endpoint instance is restarted.
+
+Whenever execution history, a timely and/or fully-reliable scheduling is needed, it is recommended to use dedicated scheduling technology, for example:
 
  * A [.NET Timer](https://msdn.microsoft.com/en-us/library/system.threading.timer.aspx).
  * [Quartz.NET](https://www.quartz-scheduler.net/). See [Quartz.NET Sample](/samples/scheduling/quartz/).
