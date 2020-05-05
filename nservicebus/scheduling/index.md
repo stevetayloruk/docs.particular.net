@@ -13,6 +13,8 @@ The Scheduler is a lightweight/non-durable API that helps schedule a task that n
 
 {{WARNING:
 
+**Does not support scaled-out endpoints!**
+
 Under certain failure scenarios, the scheduled task can stop firing until the endpoint is restarted. 
 
 The Scheduler leverages the queuing system to trigger scheduled actions. Under heavy load, there may be some disparity between the expected time of a scheduled action and execution time due to the delay between timeout messages being generated and processed. This behavior can be mitigated by running the Scheduler in a dedicated endpoint so that appropriate resource allocation can put be in place. 
