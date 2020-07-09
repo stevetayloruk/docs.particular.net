@@ -15,7 +15,7 @@ The Scheduler is a lightweight/non-durable API that helps schedule a task that n
 
 {{WARNING:
 
-**Does not support scaled-out endpoints!**
+** DO NOT USE** Does not support scaled-out endpoints, *any* errors during job execution will NOT be retried.
 
 Under certain failure scenarios, the scheduled task can stop firing until the endpoint is restarted. 
 
